@@ -17,8 +17,8 @@ var simple = require('./simple')
  */
 
 var ee = new EventEmitter()
-  , incoming = new lotus.readerStream()
-  , outgoing = new lotus.writerStream()
+  , incoming = lotus.createReaderStream()
+  , outgoing = lotus.createWriterStream();
 
 /*!
  * EventEmitter example

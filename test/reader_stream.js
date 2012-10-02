@@ -29,7 +29,7 @@ describe('ReaderStream', function () {
 
           function process () {
             var buf = queue.splice(0, 1).slice()
-            buf[0].should.equal(1);
+            buf.should.deep.equal(new Buffer([ 1 ]));
             done(null, { hello: 'world' });
           }
 

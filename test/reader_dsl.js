@@ -65,7 +65,9 @@ describe('Reader DSL', function () {
   describe('byte readers', function () {
 
     it('has all byte readers', function () {
-      [ 8, 16, 32 ].forEach(function (bits) {
+      lotus.Reader.should.respondTo('u8');
+      lotus.Reader.should.respondTo('s8');
+      [ 16, 32 ].forEach(function (bits) {
         lotus.Reader.should.respondTo('u' + bits + 'be');
         lotus.Reader.should.respondTo('u' + bits + 'le');
         lotus.Reader.should.respondTo('s' + bits + 'be');

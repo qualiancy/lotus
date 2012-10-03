@@ -77,4 +77,19 @@ describe('Writer DSL', function () {
 
   });
 
+  describe('byte writers', function () {
+
+    it('has all byte readers', function () {
+      lotus.Writer.should.respondTo('u8');
+      lotus.Writer.should.respondTo('s8');
+      [ 16, 32 ].forEach(function (bits) {
+        lotus.Writer.should.respondTo('u' + bits + 'be');
+        lotus.Writer.should.respondTo('u' + bits + 'le');
+        lotus.Writer.should.respondTo('s' + bits + 'be');
+        lotus.Writer.should.respondTo('s' + bits + 'le');
+      });
+    });
+
+  });
+
 });

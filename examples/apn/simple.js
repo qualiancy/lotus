@@ -14,13 +14,10 @@ var lotus = require('../../');
  */
 
 exports.reader = lotus.reader()
-  .uint16be('tokenLen')
+  .u16be('tokenLen')
   .take('tokenLen', 'deviceToken')
-  .uint16be('payloadLen')
-  .take('payloadLen', 'payload', function (res) {
-    return JSON.parse(res);
-  })
-  .end();
+  .u16be('payloadLen')
+  .take('payloadLen', 'payload', JSON.parse);
 
 /**
  * .writer
@@ -32,13 +29,12 @@ exports.reader = lotus.reader()
  */
 
 exports.writer = lotus.writer()
-  .uint16be(function (msg) {
+  .u16be(function (msg) {
     return msg.deviceToken.length;
   })
   .push('deviceToken')
-  .uint16be(function (msg) {
-    msg.payload = JSON.stringify(msg.payload);
-    return Buffer.byteLength(msg.payload, 'utf8');
+  .u16be(function (msg) {
+    var payload = JSON.stringify(msg.payload);
+    return Buffer.byteLength(payload, 'utf8');
   })
-  .write('payload', 'utf8')
-  .end();
+  .write('payload', 'utf8', JSON.stringify);

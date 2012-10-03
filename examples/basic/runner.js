@@ -8,8 +8,7 @@ var lotus = require('../../');
  * Import protocols
  */
 
-var simple = require('./simple')
-  , enhanced = require('./enhanced');
+var dsl = require('./dsl')
 
 /*!
  * Example streams
@@ -22,15 +21,13 @@ var incoming = lotus.createReaderStream()
  * Setup protocols for incoming stream
  */
 
-incoming.use(0, simple.reader);
-incoming.use(1, enhanced.reader);
+incoming.use(0, dsl.reader);
 
 /*!
  * Setup protocols for outgoing stream
  */
 
-outgoing.use(0, simple.writer);
-outgoing.use(1, enhanced.writer);
+outgoing.use(0, dsl.writer);
 
 /*!
  * Simple piping demo
@@ -54,7 +51,6 @@ var data = require('./data');
 
 process.nextTick(function () {
   data.forEach(function (em) {
-    outgoing.write(0, em);
-    outgoing.write(1, em);
+    outgoing.write(0, { payload: em });
   });
 });

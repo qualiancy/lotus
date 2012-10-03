@@ -1,5 +1,5 @@
 global.chai = require('chai');
-global.Should = chai.Should();
+global.should = chai.should();
 
 var chaiSpies = require('chai-spies');
 global.chai.use(chaiSpies);

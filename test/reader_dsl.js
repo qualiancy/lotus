@@ -1,8 +1,7 @@
-
 describe('Reader DSL', function () {
   var Buffers = require('bufs');
 
-  describe('take', function () {
+  describe('.take()', function () {
 
     it('can take a numbered length', function (done) {
       var bufs = new Buffers()
@@ -62,5 +61,4 @@ describe('Reader DSL', function () {
     });
 
   });
-
 });

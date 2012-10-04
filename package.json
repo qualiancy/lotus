@@ -1,7 +1,7 @@
 {
     "name": "lotus"
   , "version": "0.0.0"
-  , "description": "Streaming buffer parser framework."
+  , "description": "Streaming buffer protocol DSL and parsing API."
   , "author": "Jake Luer <jake@qualiancy.com> (http://qualiancy.com)"
   , "license": "MIT"
   , "keywords": [

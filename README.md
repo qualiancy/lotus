@@ -1,6 +1,6 @@
 # Lotus
 
-> Buffer stream (such as TCP) protocol DSL and parsing API.
+> Streaming buffer protocol DSL and parsing API.
 
 #### Installation
 

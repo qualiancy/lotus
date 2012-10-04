@@ -1,4 +1,4 @@
-# Lotus
+# Lotus [![Build Status](https://secure.travis-ci.org/qualiancy/lotus.png)](http://travis-ci.org/qualiancy/lotus)
 
 > Streaming buffer protocol DSL and parsing API.
 

@@ -60,6 +60,23 @@ describe('Reader DSL', function () {
       }, 10);
     });
 
+    it('can take from a normal buffer', function () {
+      var buf = new Buffer([ 1, 2, 3 ])
+        , reader = lotus.reader();
+
+      reader.take(3, 'token', function (res) {
+        res.should.be.instanceof(Buffer)
+          .with.length(3)
+          .and.deep.equal(new Buffer([ 1, 2, 3 ]));
+        return '123';
+      });
+
+      reader.handle(buf, function (err, msg) {
+        should.not.exist(err);
+        msg.should.deep.equal({ token: '123' });
+      });
+    });
+
   });
 
   describe('byte readers', function () {

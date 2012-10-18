@@ -1,4 +1,10 @@
 
+0.2.0 / 2012-10-18 
+==================
+
+  * test for handle of normal buffer
+  * reader handle converts node buffer to buffers collection
+
 0.1.0 / 2012-10-03 
 ==================
 

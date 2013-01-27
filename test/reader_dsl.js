@@ -9,7 +9,7 @@ describe('Reader DSL', function () {
 
       reader.take(3, 'token', function (res) {
         res.should.be.instanceof(Buffer)
-          .with.length(3)
+          .with.lengthOf(3)
           .and.deep.equal(new Buffer([ 1, 2, 3 ]));
         return '123';
       });
@@ -33,13 +33,13 @@ describe('Reader DSL', function () {
 
       reader.take(0, 'tokenLen', function (res) {
         res.should.be.instanceof(Buffer)
-          .with.length(0);
+          .with.lengthOf(0);
         return 3;
       });
 
       reader.take('tokenLen', 'token', function (res) {
         res.should.be.instanceof(Buffer)
-          .with.length(3)
+          .with.lengthOf(3)
           .and.deep.equal(new Buffer([ 1, 2, 3 ]));
         return '123';
       });
@@ -66,7 +66,7 @@ describe('Reader DSL', function () {
 
       reader.take(3, 'token', function (res) {
         res.should.be.instanceof(Buffer)
-          .with.length(3)
+          .with.lengthOf(3)
           .and.deep.equal(new Buffer([ 1, 2, 3 ]));
         return '123';
       });

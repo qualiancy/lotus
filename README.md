@@ -2,6 +2,11 @@
 
 > Streaming buffer protocol DSL and parsing API.
 
+#### Features
+
+- chainable dsl for encode/decode definitions
+- streamable 
+
 #### Installation
 
 `lotus` is available on [npm](http://npmjs.org).

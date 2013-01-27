@@ -1,4 +1,10 @@
 
+0.3.0 / 2013-01-27 
+==================
+
+  * readme: update package name
+  * writer-dsl: [push] fix global leak causing overwriting of settings
+
 0.2.0 / 2012-10-18 
 ==================
 

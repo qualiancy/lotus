@@ -1,4 +1,11 @@
 
+0.4.0 / 2013-02-04 
+==================
+
+  * test: add tests for single encoder/decoder scenarios
+  * streams: allow for single encoder/decoder scenarios
+  * test: [reader_dsl] chai chainable length bugfix
+
 0.3.1 / 2013-01-27 
 ==================
 

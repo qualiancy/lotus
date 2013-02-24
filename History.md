@@ -1,4 +1,9 @@
 
+0.4.1 / 2013-02-24 
+==================
+
+  * streams: fix bug preventing dsl in single codec reader/writer
+
 0.4.0 / 2013-02-04 
 ==================
 

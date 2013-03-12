@@ -1,4 +1,4 @@
-describe.only('Encoder', function () {
+describe('Encoder Interface', function () {
   var noop = function () {};
 
   describe('.stream() [single stream]', function () {

@@ -1,5 +1,5 @@
 /*!
- * Module dependancies
+ * Module dependencies
  */
 
 var lotus = require('../../');
@@ -11,8 +11,8 @@ var lotus = require('../../');
  */
 
 exports.decode = lotus.decode()
-  .u16be('len')
-  .take('len', 'payload', JSON.parse);
+  .u16be('payloadLen')
+  .take('payloadLen', 'payload', JSON.parse);
 
 /**
  * .encode

@@ -1,5 +1,5 @@
 /*!
- * Module dependancies
+ * Module dependencies
  */
 
 var lotus = require('../..');

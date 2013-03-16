@@ -1,4 +1,28 @@
 
+1.0.0 / 2013-03-16 
+==================
+
+  * examples: [net] add next example
+  * examples: use encoder close event
+  * decoder: remove unused properties
+  * encoder: emit close event
+  * test: remove extraneous file
+  * encoder/decoder-stream: patch readable stream interfaces to use proper semantics
+  * examples: refactor into basic.single and basic.multi
+  * encoder: properly end when all streams are done
+  * examples: remove apn
+  * pgk: node engine above 0.8.0
+  * travis: test 0.8 and 0.10
+  * Merge branch 'refactor/node10'
+  * encoder: [patch] make consistent with decoder
+  * decoder: complete refactor of reader stream as decoder
+  * test: refactor reader stream to decoder
+  * decoder: [dsl] update constructor names, exports and tests
+  * clean: remove old writer_stream
+  * encoder: complete refactor of writer as encoder
+  * dsl: rename to encoder/decoder
+  * pgk: add readable-stream for node10 compat
+
 0.4.1 / 2013-02-24 
 ==================
 

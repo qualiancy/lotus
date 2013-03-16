@@ -1,4 +1,4 @@
-describe.only('Decoder DSL', function () {
+describe('Decoder DSL', function () {
   var Buffers = require('bufs');
 
   describe('.take()', function () {

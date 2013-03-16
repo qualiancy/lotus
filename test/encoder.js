@@ -143,12 +143,17 @@ describe('Encoder Interface', function () {
       stream1.write({ hello: 'world' });
       stream2.write({ hello: 'universe' });
       stream1.write({ hello: 'world' });
-      stream1.write({ hello: 'world' });
-      stream1.end();
 
-      stream2.write({ hello: 'universe' });
-      stream2.write({ hello: 'universe' });
-      stream2.end();
+      setTimeout(function () {
+        stream1.write({ hello: 'world' });
+        stream1.end();
+      }, 5);
+
+      setTimeout(function () {
+        stream2.write({ hello: 'universe' });
+        stream2.write({ hello: 'universe' });
+        stream2.end();
+      }, 10);
     });
   });
 });

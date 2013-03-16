@@ -55,7 +55,7 @@ incoming2.on('readable', function () {
  * Done with everything listener
  */
 
-encoder.on('end', function () {
+encoder.on('close', function () {
   console.log('encoding done');
 });
 

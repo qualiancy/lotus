@@ -5,22 +5,22 @@
 var lotus = require('../../');
 
 /**
- * .reader
+ * .decode
  *
  * @api public
  */
 
-exports.reader = lotus.reader()
+exports.decode = lotus.decode()
   .u16be('payloadLen')
-  .take('payloadLen', 'payload', 'utf8', JSON.parse);
+  .take('payloadLen', 'payload', JSON.parse);
 
 /**
- * .writer
+ * .encode
  *
  * @api public
  */
 
-exports.writer = lotus.writer()
+exports.encode = lotus.encode()
   .u16be(function (msg) {
     var payload = JSON.stringify(msg.payload);
     return Buffer.byteLength(payload, 'utf8');

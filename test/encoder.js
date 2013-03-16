@@ -6,7 +6,6 @@ describe('Encoder Interface', function () {
       var encoder = lotus.createEncoder()
         , stream = encoder.stream(noop);
       stream.should.have.property('headerid', -1);
-      stream.writable.should.be.true;
     });
 
     it('should get an already existing writable interface', function () {
@@ -102,7 +101,7 @@ describe('Encoder Interface', function () {
       }).should.throw('Cannot convert Encoder to use single DSL.');
     });
 
-    it('can handle writing of objects to buffer', function (done) {
+    it('should handle writing of objects to buffer', function (done) {
       var encoder = lotus.createEncoder()
         , tmp = []
         , handle1, handle2
@@ -113,14 +112,14 @@ describe('Encoder Interface', function () {
         tmp.push(buf);
       });
 
-      handle1 = chai.spy('handle', function (msg, next) {
+      handle1 = chai.spy('handle1', function (msg, next) {
         next.should.be.a('function');
         msg.should.be.an('object')
           .that.deep.equals({ hello: 'world' });
         next(null, new Buffer([ 8 ]));
       });
 
-      handle2 = chai.spy('handle', function (msg, next) {
+      handle2 = chai.spy('handle2', function (msg, next) {
         next.should.be.a('function');
         msg.should.be.an('object')
           .that.deep.equals({ hello: 'universe' });

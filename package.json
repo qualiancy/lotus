@@ -19,6 +19,8 @@
     }
   , "dependencies": {
         "bufs": "0.0.x"
+      , "readable-stream": "1.0.x"
+      , "sherlock": "*"
     }
   , "devDependencies": {
         "chai": "*"

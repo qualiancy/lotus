@@ -1,4 +1,9 @@
 
+1.0.1 / 2013-04-16 
+==================
+
+  * streams: [enc/dec] change highwatermark for object streams to 1
+
 1.0.0 / 2013-03-16 
 ==================
 
